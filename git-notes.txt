@@ -1,0 +1,44 @@
+When starting a new repository, you need to follow these steps:
+======================================================================================
+1) Add the repo on Github.
+2) Run the following commands in your local directory:
+   $ git init
+   $ touch README.md
+   $ git add -A
+   $ git commit -m "some message"
+   $ git remote add origin https://github.com/<YOUR-USERNAME>/<YOUR-REPO-NAME>.git
+   $ git push origin master
+
+
+After your repo has been created locally and remotely - and you completed your first PUSH,
+ou can follow this similar workflow to PUSH as needed:
+======================================================================================
+$ git add -A
+$ git commit -am 'message'
+$ git push origin master
+
+NOTE: The string within the commit command should be replaced each time with
+a description of the changes made in that commit
+
+Add a .gitignore file (no file extension!), which is a file that you can use to specify
+files you wish to ignore or keep out of your repository, both local and remote. What files
+should you keep out? If it's clutter (such as a .pyc file) or a secret (such as an API key),
+then keep it out of your public repo on Github.
+
+Please read more about .gitignore: https://git-scm.com/docs/gitignore
+
+For now, add the files found here: https://github.com/github/gitignore/blob/master/Python.gitignore
+
+
+Your Setup
+1. We have one directory, "RealPython", that will contain all of your projects.
+2. Each of those project directories will contain a separate virtual environment, Git repo, and .gitignore file.
+3. Finally, we want to set up a requirements.txt file for each virtual environment. This file contains a list of
+   packages you've installed via pip. This is meant to be used by other developers to recreate the same development
+   environment. To do this, run the following command when your virtual environment is activated:
+   $ pip freeze > requirements.txt
+
+NOTE: Although this is optional, we highly recommend setting up a RSA key for
+use with Github so you don't have to enter your password each time you push
+code to Github. Follow the instructions here:
+https://help.github.com/articles/connecting-to-github-with-ssh/
