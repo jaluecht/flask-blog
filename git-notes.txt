@@ -5,7 +5,7 @@ When starting a new repository, you need to follow these steps:
    $ git init
    $ touch README.md
    $ git add -A
-   $ git commit -m "some message"
+   $ git commit -m "Init"
    $ git remote add origin https://github.com/<YOUR-USERNAME>/<YOUR-REPO-NAME>.git
    $ git push origin master
 
